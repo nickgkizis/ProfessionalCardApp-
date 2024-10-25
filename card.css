@@ -1,0 +1,333 @@
+/* Import different fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Arial&family=Courier+New&family=Georgia&family=Verdana&family=Tahoma&family=Trebuchet+MS&family=Lucida+Grande&family=Helvetica&family=Impact&display=swap');
+
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Default font */
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.divider {
+    border: none;
+    height: 1px; /* Height of the line */
+    background-color: #ccc; /* Color of the line */
+    margin: 15px 0; /* Space above and below the line */
+    width: 100%; /* Make it full width */
+}
+
+.card-builder-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card-form {
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+}
+
+.card-form label {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.card-form i {
+    width: 2vw;
+}
+
+.card-form input {
+    flex: 1;
+    padding:10px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.card-form input:focus {
+    border: 1px solid #007bff;
+}
+
+.card-form button, .download {
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 1s ease-in-out;
+}
+
+.card-form button:hover {
+    background-color: #0056b3;
+}
+
+.cf-2 label {
+    margin-top: 10rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-preview {
+    max-width: 500px;
+    word-wrap: break-word;
+    min-width: 400px;
+    min-height: 20vh;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+}
+
+/* Theme Styles */
+.theme-buttons{
+    width: 30vw;
+    scale: 0.9;
+}
+.theme-buttons button{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+.theme-buttons button:hover{
+    scale: 1.1;
+}
+.theme1 {
+    font-family: 'Arial', sans-serif; /* Classic */
+    background: linear-gradient(to right, #f5f5f5, #ffffff);
+}
+
+.theme2 {
+    font-family: 'Verdana', sans-serif; /* Modern */
+    background: linear-gradient(to right, #333, #222);
+    color: #f5f5f5;
+}
+
+.theme3 {
+    font-family: 'Courier New', monospace; /* Bold */
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: #fff;
+}
+
+.theme4 {
+    font-family: 'Georgia', serif; /* Neon */
+    background: linear-gradient(to right, #ff4081, #c60055);
+    color: #fff;
+}
+
+.theme5 {
+    font-family: 'Roboto', sans-serif; /* Pastel */
+    background: linear-gradient(to right, #ffcccb, #ffebee);
+}
+
+.theme6 {
+    font-family: 'Tahoma', sans-serif; /* Dark */
+    background: linear-gradient(to right, #2c2c2c, #444);
+    color: #f5f5f5;
+}
+
+.theme7 {
+    font-family: 'Trebuchet MS', sans-serif; /* Light */
+    background: linear-gradient(to right, #ffffff, #f5f5f5);
+    color: #333;
+}
+
+.theme8 {
+    font-family: 'Lucida Grande', sans-serif; /* Vibrant */
+    background: linear-gradient(to right, #ffeb3b, #ffe700);
+    color:black;
+}
+
+.theme9 {
+    font-family: 'Impact', sans-serif; /* Minimalist */
+    background: linear-gradient(to right, #cccccc, #e0e0e0);
+    color: black;
+}
+
+.theme10 {
+    font-family: 'Helvetica', sans-serif; /* Artistic */
+    background: linear-gradient(to right, #8e44ad, #7d3c98);
+    color: #fff;
+}
+
+.theme11 {
+    font-family: 'Georgia', serif; /* Futuristic */
+    background: linear-gradient(to right, #3a3a3a, #4a4a4a);
+    color: #fff;
+}
+
+.theme12 {
+    font-family: 'Times New Roman', serif; /* Rustic */
+    background: linear-gradient(to right, #c5b29a, #d9c7b5);
+    color: black;
+}
+
+.theme13 {
+    font-family: 'Comic Sans MS', cursive; /* Elegant */
+    background: linear-gradient(to right, #4B0082, #5c4f8a);
+    color: #fff;
+}
+
+.theme14 {
+    font-family: 'Fantasy', cursive; /* Playful */
+    background: linear-gradient(to right, #FF69B4, #FF1493);
+    color: #fff;
+}
+
+.theme15 {
+    font-family: 'Courier New', monospace; /* Retro */
+    background: linear-gradient(to right, #FF4500, #FF6347);
+    color: #fff;
+}
+
+.theme16 {
+    font-family: 'Arial Black', sans-serif; /* Bold */
+    background: linear-gradient(to right, #8A2BE2, #6a5acd);
+    color: #fff;
+}
+
+.theme17 {
+    font-family: 'Segoe UI', sans-serif; /* Art Deco */
+    background: linear-gradient(to right, #00FF7F, #32CD32);
+    color: #fff;
+}
+
+.theme18 {
+    font-family: 'Papyrus', fantasy; /* Whimsical */
+    background: linear-gradient(to right, #FFD700, #FFC300);
+    color: #fff;
+}
+
+.theme19 {
+    font-family: 'Arial', sans-serif; /* Geometric */
+    background: linear-gradient(to right, #1E90FF, #00BFFF);
+    color: #fff;
+}
+
+.theme20 {
+    font-family: 'Georgia', serif; /* Gothic */
+    background: linear-gradient(to right, #A52A2A, #800000);
+    color: #fff;
+}
+
+
+.card-preview h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.card-preview p {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.card-preview i {
+    margin-right: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.hamburger-menu {
+    display:none;
+}
+.download{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-hidden {
+    display: none;
+  }
+  
+/* Media Query for Column Layout and Hamburger Menu under 1450px */
+@media (max-width: 1100px) {
+
+    /* Stack elements in a column layout */
+    .card-builder-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-form {
+        width: 100%; /* Full width for inputs */
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cf-1 i{
+        padding: 0 1rem;
+    }
+
+    .cf-2 {
+        width: 100%; /* Full width for theme selector */
+        text-align: center;
+    }
+
+    .cf-2 .theme-buttons {
+        display: none; /* Hide theme buttons initially */
+        flex-direction: column;
+    }
+    .theme-buttons{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    .hidden{
+        display: flex;
+        flex-direction: row;
+    }
+    .cf-2 label{
+        display: none;
+    }
+
+    /* .card-preview {
+        min-width: 30vw;
+        min-height: 30vh;
+    } */
+}
+@media (max-width: 1000px) {
+
+    /* .card-preview {
+        min-width: 50vw;
+        min-height: 30vh;
+    } */
+    .theme-buttons{
+        width: 80%;
+        scale: 0.9;
+    }
+
+}
+@media (max-width: 400px) {
+
+    .card-preview {
+        min-width: 100vw;
+        min-height: 30vh;
+    }
+    .theme-buttons{
+        width: 100%;
+        scale: 0.9;
+    }
+
+}
