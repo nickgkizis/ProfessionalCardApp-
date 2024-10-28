@@ -39,16 +39,40 @@ function setTheme(theme) {
   updateCard(); // Update card information if necessary
 }
 
-function downloadCard() {
-  html2canvas(document.getElementById("cardPreview")).then((canvas) => {
-    const link = document.createElement("a");
-    link.href = canvas.toDataURL();
-    link.download = "business_card.png";
-    link.click();
-  });
+function downloadCard(format) {
+  const cardElement = document.getElementById("cardPreview");
+  html2canvas(cardElement, {
+    scale: 2,
+  })
+    .then((canvas) => {
+      const downloadLink = document.createElement("a");
+
+      if (format === "png" || format === "jpg") {
+        const imgType = format === "png" ? "image/png" : "image/jpeg";
+        downloadLink.href = canvas.toDataURL(imgType);
+        downloadLink.download = `business-card.${format}`;
+        downloadLink.click();
+      } else if (format === "pdf") {
+        const imgData = canvas.toDataURL("image/png");
+
+        const pdf = new window.jspdf.jsPDF({
+          orientation: "landscape",
+          unit: "in",
+          format: [3.5, 2],
+          putOnlyUsedFonts: true,
+          floatPrecision: 16, 
+        });
+        pdf.addImage(imgData, "PNG", 0, 0, 3.5, 2); 
+        pdf.save("business-card.pdf");
+      }
+    })
+    .catch((error) => console.error("Error generating file:", error));
 }
 
-function toggleMenu() {
-  const menu = document.querySelector(".theme-buttons");
-  menu.classList.toggle("show");
-}
+
+
+
+
+
+
+

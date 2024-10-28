@@ -6,6 +6,7 @@
     <title>Virtual Business Card Builder</title>
     <link rel="stylesheet" href="card.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -41,75 +42,118 @@
                 </label>
                 <div class="hidden">
                     <div class="theme-buttons">
-                        <button class="theme-button theme1" style="color: black;" onclick="setTheme('theme1')">Classic</button>
-                        <button class="theme-button theme2" onclick="setTheme('theme2')">Midnight</button>
-                        <button class="theme-button theme3" onclick="setTheme('theme3')">Ocean</button>
-                        <button class="theme-button theme4" onclick="setTheme('theme4')">Neon</button>
-                        <button class="theme-button theme5" onclick="setTheme('theme5')" style="color: black;">Pastel</button>
-                        <button class="theme-button theme6" onclick="setTheme('theme6')">Dark</button>
-                        <button class="theme-button theme7" onclick="setTheme('theme7')" style="color: black;">Light</button>
-                        <button class="theme-button theme8" onclick="setTheme('theme8')" style="color: black;">Vibrant</button>
-                        <button class="theme-button theme9" onclick="setTheme('theme9')" style="color: black;">Minimalist</button>
-                        <button class="theme-button theme10" onclick="setTheme('theme10')">Artistic</button>
-                        <button class="theme-button theme11" onclick="setTheme('theme11')">Futuristic</button>
-                        <button class="theme-button theme12" onclick="setTheme('theme12')"style="color: black;">Rustic</button>
-                        <button class="theme-button theme13" onclick="setTheme('theme13')">Elegant</button>
-                        <button class="theme-button theme14" onclick="setTheme('theme14')">Playful</button>
-                        <button class="theme-button theme15" onclick="setTheme('theme15')">Retro</button>
-                        <button class="theme-button theme16" onclick="setTheme('theme16')">Bold</button>
-                        <button class="theme-button theme17" onclick="setTheme('theme17')">Art Deco</button>
-                        <button class="theme-button theme18" onclick="setTheme('theme18')">Whimsical</button>
-                        <button class="theme-button theme19" onclick="setTheme('theme19')">Geometric</button>
-                        <button class="theme-button theme20" onclick="setTheme('theme20')">Gothic</button>
+                        <button class="theme-button theme1" style="color: black;" onclick="setTheme('theme1')"><i class="fas fa-paint-brush"></i> Classic</button>
+                        <button class="theme-button theme2" onclick="setTheme('theme2')"><i class="fas fa-star"></i> Midnight</button>
+                        <button class="theme-button theme3" onclick="setTheme('theme3')"><i class="fas fa-water"></i> Ocean</button>
+                        <button class="theme-button theme4" onclick="setTheme('theme4')"><i class="fas fa-bolt"></i> Neon</button>
+                        <button class="theme-button theme5" onclick="setTheme('theme5')" style="color: black;"><i class="fas fa-snowflake"></i> Pastel</button>
+                        <button class="theme-button theme6" onclick="setTheme('theme6')"><i class="fas fa-moon"></i> Dark</button>
+                        <button class="theme-button theme7" onclick="setTheme('theme7')" style="color: black;"><i class="fas fa-sun"></i> Light</button>
+                        <button class="theme-button theme8" onclick="setTheme('theme8')" style="color: black;"><i class="fas fa-fire"></i> Vibrant</button>
+                        <button class="theme-button theme9" onclick="setTheme('theme9')" style="color: black;"><i class="fa-solid fa-cube"></i>Minimalist</button>
+                        <button class="theme-button theme10" onclick="setTheme('theme10')"><i class="fas fa-paint-roller"></i> Artistic</button>
+                        <button class="theme-button theme11" onclick="setTheme('theme11')" style="color:#0dc016;"><i class="fas fa-robot"></i> Futuristic</button>
+                        <button class="theme-button theme12" onclick="setTheme('theme12')" style="color: black;"><i class="fas fa-tree"></i> Rustic</button>
+                        <button class="theme-button theme13" onclick="setTheme('theme13')"><i class="fas fa-gem"></i> Elegant</button>
+                        <button class="theme-button theme14" onclick="setTheme('theme14')"><i class="fas fa-laugh"></i> Playful</button>
+                        <button class="theme-button theme15" onclick="setTheme('theme15')"><i class="fas fa-history"></i> Retro</button>
+                        <button class="theme-button theme16" onclick="setTheme('theme16')"><i class="fas fa-bold"></i> Bold</button>
+                        <button class="theme-button theme17" onclick="setTheme('theme17')"><i class="fas fa-archway"></i> Art Deco</button>
+                        <button class="theme-button theme18" onclick="setTheme('theme18')"><i class="fas fa-umbrella"></i> Whimsical</button>
+                        <button class="theme-button theme19" onclick="setTheme('theme19')"><i class="fas fa-shapes"></i> Geometric</button>
+                        <button class="theme-button theme20" onclick="setTheme('theme20')"><i class="fas fa-church"></i> Gothic</button>
                     </div>
                 </div>
             </div>
             
-            
             <div class="cf-2">
                 <div class="theme-buttons">
-                    <button class="theme-button theme1" style="color: black;" onclick="setTheme('theme1')">Classic</button>
-                    <button class="theme-button theme2" onclick="setTheme('theme2')">Midnight</button>
-                    <button class="theme-button theme3" onclick="setTheme('theme3')">Ocean</button>
-                    <button class="theme-button theme4" onclick="setTheme('theme4')">Neon</button>
-                    <button class="theme-button theme5" onclick="setTheme('theme5')" style="color: black;">Pastel</button>
-                    <button class="theme-button theme6" onclick="setTheme('theme6')">Dark</button>
-                    <button class="theme-button theme7" onclick="setTheme('theme7')" style="color: black;">Light</button>
-                    <button class="theme-button theme8" onclick="setTheme('theme8')" style="color: black;">Vibrant</button>
-                    <button class="theme-button theme9" onclick="setTheme('theme9')" style="color: black;">Minimalist</button>
-                    <button class="theme-button theme10" onclick="setTheme('theme10')">Artistic</button>
-                    <button class="theme-button theme11" onclick="setTheme('theme11')">Futuristic</button>
-                    <button class="theme-button theme12" onclick="setTheme('theme12')"style="color: black;">Rustic</button>
-                    <button class="theme-button theme13" onclick="setTheme('theme13')">Elegant</button>
-                    <button class="theme-button theme14" onclick="setTheme('theme14')">Playful</button>
-                    <button class="theme-button theme15" onclick="setTheme('theme15')">Retro</button>
-                    <button class="theme-button theme16" onclick="setTheme('theme16')">Bold</button>
-                    <button class="theme-button theme17" onclick="setTheme('theme17')">Art Deco</button>
-                    <button class="theme-button theme18" onclick="setTheme('theme18')">Whimsical</button>
-                    <button class="theme-button theme19" onclick="setTheme('theme19')">Geometric</button>
-                    <button class="theme-button theme20" onclick="setTheme('theme20')">Gothic</button>
+                    <button class="theme-button theme1" style="color: black;" onclick="setTheme('theme1')"><i class="fas fa-paint-brush"></i> Classic</button>
+                    <button class="theme-button theme2" onclick="setTheme('theme2')"><i class="fas fa-star"></i> Midnight</button>
+                    <button class="theme-button theme3" onclick="setTheme('theme3')"><i class="fas fa-water"></i> Ocean</button>
+                    <button class="theme-button theme4" onclick="setTheme('theme4')"><i class="fas fa-bolt"></i> Neon</button>
+                    <button class="theme-button theme5" onclick="setTheme('theme5')" style="color: black;"><i class="fas fa-snowflake"></i> Pastel</button>
+                    <button class="theme-button theme6" onclick="setTheme('theme6')"><i class="fas fa-moon"></i> Dark</button>
+                    <button class="theme-button theme7" onclick="setTheme('theme7')" style="color: black;"><i class="fas fa-sun"></i> Light</button>
+                    <button class="theme-button theme8" onclick="setTheme('theme8')" style="color: black;"><i class="fas fa-fire"></i> Vibrant</button>
+                    <button class="theme-button theme9" onclick="setTheme('theme9')" style="color: black;"><i class="fa-solid fa-cube"></i>Minimalist</button>
+                    <button class="theme-button theme10" onclick="setTheme('theme10')"><i class="fas fa-paint-roller"></i> Artistic</button>
+                    <button class="theme-button theme11" onclick="setTheme('theme11')" style="color:#0dc016;"><i class="fas fa-robot"></i> Futuristic</button>
+                    <button class="theme-button theme12" onclick="setTheme('theme12')" style="color: black;"><i class="fas fa-tree"></i> Rustic</button>
+                    <button class="theme-button theme13" onclick="setTheme('theme13')"><i class="fas fa-gem"></i> Elegant</button>
+                    <button class="theme-button theme14" onclick="setTheme('theme14')"><i class="fas fa-laugh"></i> Playful</button>
+                    <button class="theme-button theme15" onclick="setTheme('theme15')"><i class="fas fa-history"></i> Retro</button>
+                    <button class="theme-button theme16" onclick="setTheme('theme16')"><i class="fas fa-bold"></i> Bold</button>
+                    <button class="theme-button theme17" onclick="setTheme('theme17')"><i class="fas fa-archway"></i> Art Deco</button>
+                    <button class="theme-button theme18" onclick="setTheme('theme18')"><i class="fas fa-umbrella"></i> Whimsical</button>
+                    <button class="theme-button theme19" onclick="setTheme('theme19')"><i class="fas fa-shapes"></i> Geometric</button>
+                    <button class="theme-button theme20" onclick="setTheme('theme20')"><i class="fas fa-church"></i> Gothic</button>
                 </div>
             </div>
              <!-- Preview Section -->
-            <div class="Preview">
-                <div class="card-preview" id="cardPreview">
-                    <h2 id="cardName">Name</h2>
-                    <p id="cardJob">Job Title</p>
-                    <hr class="divider">
-                    <p id="cardLinkedin" class="card-hidden "><i class="fab fa-linkedin"></i> <span id="linkedinText"></span></p>
-                    <p id="cardWeb" class="card-hidden "><i class="fas fa-globe"></i> <span id="webText"></span></p>
-                    <p id="cardGithub" class="card-hidden "><i class="fab fa-github"></i> <span id="githubText">GitHub</span></p>
-                    <p id="cardLocation" class="card-hidden "><i class="fas fa-map-marker-alt"></i> <span id="locationText">Location</span></p>
-                    <p id="cardEmail" class="card-hidden "><i class="fas fa-envelope"></i> <span id="emailText">Email</span></p>
-                    <p id="cardPhone" class="card-hidden "><i class="fas fa-phone"></i> <span id="phoneText">Phone</span></p>
+            <div class="prev">
+                <div class="Preview">
+                    <div class="card-preview" id="cardPreview">
+                        <h2 id="cardName">Name</h2>
+                        <p id="cardJob">Job Title</p>
+                        <hr class="divider">
+                        <p id="cardLinkedin" class="card-hidden">
+                            <span class="icon-text">
+                                <i class="fab fa-linkedin"></i>
+                                <span id="linkedinText"></span>
+                            </span>
+                        </p>
+                        <p id="cardWeb" class="card-hidden">
+                            <span class="icon-text">
+                                <i class="fas fa-globe"></i>
+                                <span id="webText"></span>
+                            </span>
+                        </p>
+                        <p id="cardGithub" class="card-hidden">
+                            <span class="icon-text">
+                                <i class="fab fa-github"></i>
+                                <span id="githubText"></span>
+                            </span>
+                        </p>
+                        <p id="cardLocation" class="card-hidden">
+                            <span class="icon-text">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span id="locationText"></span>
+                            </span>
+                        </p>
+                        <p id="cardEmail" class="card-hidden">
+                            <span class="icon-text">
+                                <i class="fas fa-envelope"></i>
+                                <span id="emailText"></span>
+                            </span>
+                        </p>
+                        <p id="cardPhone" class="card-hidden">
+                            <span class="icon-text">
+                                <i class="fas fa-phone"></i>
+                                <span id="phoneText"></span>
+                            </span>
+                        </p>
+                    </div>
                 </div>
-                <button class="download" onclick="downloadCard()">Download Card</button>
-            </div>
-        </div>
 
-       
-        
-        
+                <div class="download-options">
+                    <button class="download" onclick="downloadCard('png')">
+                        <i class="fa-solid fa-download"></i>
+                        PNG
+                    </button>
+                    <button class="download" onclick="downloadCard('jpg')">
+                        <i class="fa-solid fa-download"></i>
+                        JPG
+                    </button>
+                    <button class="download" onclick="downloadCard('pdf')">
+                        <i class="fa-solid fa-download"></i>
+                        PDF
+                    </button>
+                </div>
+
+            </div>
+            
+        </div>  
     </div>
 
     <script src="card.js"></script>
